@@ -59,7 +59,7 @@ public class Application {
                 System.out.println("Opção inválida");
         }
 
-        }while (opcao <= 4);
+        }while (opcao < 4);
 
     }
 }
