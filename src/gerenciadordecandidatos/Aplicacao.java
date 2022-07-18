@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Aplicacao {
-    public  static void menu() {
+    public static void menu() {
         System.out.println("Gerenciador de candidatos");
         System.out.println("1. Adicionar candidato a lista.");
         System.out.println("2. Exibir lista de candidatos.");
@@ -31,36 +31,34 @@ public class Aplicacao {
                 listaDeCandidatos.remove(i);
                 System.out.println("Gerenciador de candidatos\n" + "Candidato excluído.");
                 System.out.println(listaDeCandidatos);
-            break;
+                break;
             }
         }
     }
 
     public static void main(String[] args) {
-
-
-        int opcao;
         Scanner input = new Scanner(System.in);
-        List <Candidato> listaDeCandidatos = new ArrayList<>();
-do {
-    menu();
-    opcao = input.nextInt();
-switch (opcao) {
-    case 1:
-        Candidato candidato = adicionar();
-listaDeCandidatos.add(candidato);
-break;
-    case 2:
-        System.out.println(listaDeCandidatos);
-        break;
-    case 3:
-        excluir(listaDeCandidatos);
-        break;
-    default:
-        System.out.println("Opção inválida");
-}
-}while (opcao < 4);
+        List<Candidato> listaDeCandidatos = new ArrayList<>();
+        int opcao;
+        do {
+            menu();
+            opcao = input.nextInt();
+            switch (opcao) {
+                case 1:
+                    Candidato candidato = adicionar();
+                    listaDeCandidatos.add(candidato);
+                    break;
+                case 2:
+                    System.out.println(listaDeCandidatos);
+                    break;
+                case 3:
+                    excluir(listaDeCandidatos);
+                    break;
+                default:
+                    System.out.println("Opção inválida");
+            }
+        } while (opcao < 4);
 
 
     }
-            }
+}
