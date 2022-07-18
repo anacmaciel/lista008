@@ -16,9 +16,9 @@ public class Executavel {
     public static Prato adicionar() {
         Scanner input = new Scanner(System.in);
         System.out.println("Digite o nome  do prato e tecle enter.");
-        String nome = input.next();
+        String nome = input.nextLine();
         System.out.println("digite os ingredientes do prato e tecle enter.");
-        String ingredientes = input.next();
+        String ingredientes = input.nextLine();
         return new Prato(nome, ingredientes);
     }
 
